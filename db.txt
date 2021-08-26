@@ -1,0 +1,30 @@
+create table books
+(
+    id          bigserial not null
+        constraint books_pkey
+            primary key,
+    title       varchar(100),
+    genre       varchar(100),
+    description varchar(1000)
+);
+
+alter table books
+    owner to postgres;
+
+
+
+-- auto-generated definition
+create table authors
+(
+    id             bigserial not null
+        constraint authors_pkey
+            primary key,
+    firstname      varchar(100),
+    lastname       varchar(100),
+    username       varchar(100),
+    specialization varchar(100)
+);
+
+alter table authors
+    owner to postgres;
+
